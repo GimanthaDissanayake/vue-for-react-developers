@@ -2,6 +2,7 @@
 // A message in the chat.
 import { inject } from "vue";
 import ChatBubble from "./ChatBubble.vue";
+import EmojiMessage from "./EmojiMessage.vue";
 import Timestamp from "../../Timestamp.vue";
 
 const props = defineProps({
@@ -33,6 +34,8 @@ const direction = props.message.senderId === userId ? "right" : "left";
        Hint: See the README's resources section for a link to Vue's directives
              There's something for conditional rendering there!
   -->
+  <EmojiMessage v-else :emoji="message.content" :direction="direction" />
+
 </template>
 
 <style scoped>

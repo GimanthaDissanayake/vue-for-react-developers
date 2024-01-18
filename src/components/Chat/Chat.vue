@@ -17,10 +17,10 @@ const messages = ref(existingMessages);
  * Adds a message to the chat
  * @param {String} content Message content
  */
-function addMessage(content) {
+function addMessage(content,type) {
   const message = {
     content,
-    type: "text", // Hint: you may want to parameterize this
+    type: type, // Hint: you may want to parameterize this
     senderId: USER_ID,
     timestamp: new Date(),
   };
@@ -38,6 +38,7 @@ provide("userId", USER_ID);
 <template>
   <CenterOnPage>
     <div class="chat shadow-2">
+      <p>Gimantha Dissanayake - 151790463 - Exercise 2</p>
       <div ref="messageListElement" class="message-list">
         <!-- Iterate over elements with v-for -->
         <ChatMessage
