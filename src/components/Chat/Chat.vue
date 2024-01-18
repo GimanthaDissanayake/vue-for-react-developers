@@ -37,7 +37,7 @@ provide("userId", USER_ID);
   <CenterOnPage>
     <div class="chat shadow-2">
       <div ref="messageListElement" class="message-list">
-        <p> Gimantha Dissanayake </p>
+        <p>Gimantha Dissanayake - 151790463 - Exercise 1</p>
         <!-- Iterate over elements with v-for -->
         <ChatMessage
           v-for="message in messages"
